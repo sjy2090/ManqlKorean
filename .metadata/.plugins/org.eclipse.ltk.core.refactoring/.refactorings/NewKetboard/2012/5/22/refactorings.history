@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;NewKetboard&apos;&#x0D;&#x0A;- Original project: &apos;NewKetboard&apos;&#x0D;&#x0A;- Original element: &apos;NewKetboard/src/New.keyboard&apos;" description="Delete element" element1="/src&lt;New.keyboard" element2="/src&lt;New" elements="2" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1338295670052" subPackages="false" version="1.0"/>
+</session>

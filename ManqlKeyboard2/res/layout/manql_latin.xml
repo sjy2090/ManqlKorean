@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:animateLayoutChanges="false" android:layout_gravity="bottom" android:layout_width="match_parent" android:layout_height="224px">
+
+    <com.manql.ManqlKeyboardView.ManqlKeyboardViewWithRipple
+        android:id="@+id/manqlKeyboardView"
+        android:layout_alignParentBottom="true"
+        android:layout_width="320px"
+        android:layout_height="180px" />
+    
+    <com.example.android.softkeyboard.LatinKeyboardView
+        android:id="@+id/keyboard_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+</LinearLayout>

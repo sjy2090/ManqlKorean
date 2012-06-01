@@ -1,0 +1,104 @@
+package com.manql.ManqlKeyboard;
+
+public class Node {
+	public double myrank;
+	public static double FLOAT_ZERO = 0.000000001;
+	public String word;
+	public boolean[] ischild;
+	public Node[] child;
+	
+	public Node()
+	{
+		myrank = -1;
+		ischild = new boolean[26];
+		child = new Node[26];
+		for(int i=0; i<26; i++)
+		{
+			ischild[i] = false;
+		}
+		word = "";
+	}
+	public boolean isword(String nword,int l)
+	{
+		int  k;
+		char j;
+		int len = nword.length();
+		if(len == l)
+			return (myrank >= -FLOAT_ZERO);
+		j = nword.charAt(l);
+		if(j>='A' && j<='Z')
+			k = j -'A';
+		else
+			k = j-'a';
+		if(k<0 || k>25 || ischild[k])
+		{
+			return isword(nword,l+1);
+		}		
+		return false;
+	}
+	public void insert(String nword, double freq,int l)
+	{
+		int i=0, k;
+		char j;
+		int len = nword.length();
+		if(len == l)
+		{
+			myrank = freq;
+			return;
+		}
+		j = nword.charAt(l);
+		if(j>='A' && j<='Z')
+			k = j -'A';
+		else
+			k = j - 'a';
+		if(k<0 || k>25)
+		{
+			insert(nword,freq,l+1);
+			return;
+		}
+		if(ischild[k])
+		{
+		
+		}
+		node.child[k] = new Node();
+		node.ischild[k] = true;
+		node.child[k].word = node.word + j;
+		node = node.child[k];
+	}
+	public static double getfreq(Node root,String nword)
+	{
+		int i, k;
+		i=0;
+		char j;
+		Node node = root;
+		int len = nword.length();
+		while(i<len){
+			j = nword.charAt(i);
+			if(j>='A' && j<='Z')
+				k = j -'A';
+			else
+				k = j-'a';
+			if(k<0 || k>25)
+			{
+				i++;
+				continue;
+			}
+			if(node.ischild[k])
+			{
+				node = node.child[k];
+			}
+			else
+			{
+				node.child[k] = new Node();
+				node.ischild[k] = true;
+				node.child[k].word = node.word + j;
+				node = node.child[k];
+			}
+			i++;
+		}
+		if(node.myrank<FLOAT_ZERO)
+			return 0;
+		return node.myrank;
+	}
+
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/icccon"
+        android:lay_out_width="fill_parent"
+        android:lay_out_height="wrap_content"
+        android:src="@drawable/korean_keyboard"
+        />
+
+</LinearLayout>

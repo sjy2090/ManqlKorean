@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ImageButton
+        android:id="@+id/icon"
+        android:lay_out_width="fill_parent"
+        android:lay_out_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable-hdpi/korean_keyboard"
+        />
+
+</LinearLayout>
